@@ -8,9 +8,36 @@
 */
 
 import router from '@adonisjs/core/services/router'
+import { middleware } from '#start/kernel'
 
-router.get('/', async () => {
-  return {
-    hello: 'world',
-  }
-})
+// Controllers
+const SessionController = () => import('#controllers/session_controller')
+const ProductsController = () => import('#controllers/products_controller')
+
+router
+  .group(() => {
+    router.get('create', [ProductsController, 'create'])
+  })
+  .prefix('/api/products')
+
+router
+  .get('/product/:id', ({ params }) => {
+    return `This is a product with id ${params.id}`
+  })
+  // Validate id to be numeric + cast to number data type
+  .where('id', router.matchers.number())
+
+router
+  .post('dashboard', async ({ auth }) => {
+    console.log(auth.user) // User
+    console.log(auth.authenticatedViaGuard) // 'api'
+    console.log(auth.user!.currentAccessToken) // AccessToken
+  })
+  .use(
+    middleware.auth({
+      guards: ['api'],
+    })
+  )
+
+router.post('session', [SessionController, 'store'])
+router.delete('session', [SessionController, 'destroy']).use(middleware.auth({ guards: ['api'] }))

@@ -14,6 +14,7 @@ const dbConfig = defineConfig({
         database: env.get('DB_DATABASE'),
       },
       migrations: {
+        disableRollbacksInProduction: true,
         naturalSort: true,
         paths: ['database/migrations'],
       },
