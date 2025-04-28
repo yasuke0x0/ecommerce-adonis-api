@@ -1,0 +1,37 @@
+{
+  "shared": {
+    "messages": {
+      "required": "Le champ est requis",
+      "string": "Le champ doit être une chaîne de caractères",
+      "email": "Le champ doit être une adresse e-mail valide",
+      "regex": "Le format du champ est invalide",
+      "url": "Le champ doit être une URL valide",
+      "activeUrl": "Le champ doit être une URL valide",
+      "alpha": "Le champ doit contenir uniquement des lettres",
+      "alphaNumeric": "Le champ doit contenir uniquement des lettres et des chiffres",
+      "minLength": "Le champ doit comporter au moins {min} caractères",
+      "maxLength": "Le champ ne doit pas dépasser {max} caractères",
+      "fixedLength": "Le champ doit comporter exactement {size} caractères",
+      "confirmed": "Le champ et son champ de confirmation doivent être identiques",
+      "endsWith": "Le champ doit se terminer par {substring}",
+      "startsWith": "Le champ doit commencer par {substring}",
+      "sameAs": "Le champ n'est pas le même que l'autre champ",
+      "notSameAs": "Le champ et l'autre champ doivent être différents",
+      "in": "L'élément sélectionné est invalide",
+      "notIn": "L'élément sélectionné est invalide",
+      "ipAddress": "Le champ doit être une adresse IP valide",
+      "uuid": "Le champ doit être un UUID valide",
+      "ulid": "Le champ doit être un ULID valide",
+      "ascii": "Le champ doit contenir uniquement des caractères ASCII",
+      "creditCard": "Le champ doit être un numéro de carte valide {providersList}",
+      "hexCode": "Le champ doit être un code couleur hex valide",
+      "iban": "Le champ doit être un numéro IBAN valide",
+      "jwt": "Le champ doit être un token JWT valide",
+      "coordinates": "Le champ doit contenir des coordonnées de latitude et de longitude",
+      "mobile": "Le champ doit être un numéro de téléphone mobile valide",
+      "passport": "Le champ doit être un numéro de passeport valide",
+      "postalCode": "Le champ doit être un code postal valide",
+      "database.unique": "Ce champ doit être unique, veuillez en choisir un autre."
+    }
+  }
+}

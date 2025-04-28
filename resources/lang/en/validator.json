@@ -1,0 +1,37 @@
+{
+  "shared": {
+    "messages": {
+      "required": "The field is required",
+      "string": "The field must be a string",
+      "email": "The field must be a valid email address",
+      "regex": "The field format is invalid",
+      "url": "The field must be a valid URL",
+      "activeUrl": "The field must be a valid URL",
+      "alpha": "The field must contain only letters",
+      "alphaNumeric": "The field must contain only letters and numbers",
+      "minLength": "The field must have at least {min} characters",
+      "maxLength": "The field must not be greater than {max} characters",
+      "fixedLength": "The field must be {size} characters long",
+      "confirmed": "The field and its confirmation field must be the same",
+      "endsWith": "The field must end with {substring}",
+      "startsWith": "The field must start with {substring}",
+      "sameAs": "The field is not the same as the other field",
+      "notSameAs": "The field and the other field must be different",
+      "in": "The selected is invalid",
+      "notIn": "The selected is invalid",
+      "ipAddress": "The field must be a valid IP address",
+      "uuid": "The field must be a valid UUID",
+      "ulid": "The field must be a valid ULID",
+      "ascii": "The field must only contain ASCII characters",
+      "creditCard": "The field must be a valid {providersList} card number",
+      "hexCode": "The field must be a valid hex color code",
+      "iban": "The field must be a valid IBAN number",
+      "jwt": "The field must be a valid JWT token",
+      "coordinates": "The field must contain latitude and longitude coordinates",
+      "mobile": "The field must be a valid mobile phone number",
+      "passport": "The field must be a valid passport number",
+      "postalCode": "The field must be a valid postal code",
+      "database.unique": "This field must be unique. Please choose another one."
+    }
+  }
+}

@@ -13,6 +13,7 @@ import { middleware } from '#start/kernel'
 // Controllers
 const SessionController = () => import('#controllers/session_controller')
 const ProductsController = () => import('#controllers/products_controller')
+const UsersController = () => import('#controllers/users_controller')
 
 router
   .group(() => {
@@ -39,5 +40,12 @@ router
     })
   )
 
-router.post('session', [SessionController, 'store'])
-router.delete('session', [SessionController, 'destroy']).use(middleware.auth({ guards: ['api'] }))
+router.post('register', [UsersController, 'register'])
+router
+  .group(() => {
+    router.post('login', [SessionController, 'store'])
+    router
+      .delete('destroy', [SessionController, 'destroy'])
+      .use(middleware.auth({ guards: ['api'] }))
+  })
+  .prefix('/session')
