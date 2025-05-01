@@ -43,7 +43,7 @@ router
 router.post('register', [UsersController, 'register'])
 router
   .group(() => {
-    router.post('login', [SessionController, 'store'])
+    router.post('store', [SessionController, 'store'])
     router
       .delete('destroy', [SessionController, 'destroy'])
       .use(middleware.auth({ guards: ['api'] }))
